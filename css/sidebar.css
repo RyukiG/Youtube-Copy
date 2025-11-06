@@ -1,0 +1,61 @@
+/* ========================
+  CONFIGURAÇÕES BARRA LATERAL
+======================== */
+.sidebar {
+  position: fixed;
+  top: 55px;
+  bottom: 0;
+  left: 0;
+  width: 72px;
+  padding-top: 5px;
+  background-color: white;
+  z-index: 1;
+}
+
+.sidebar-link {
+  height: 74px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.sidebar-link:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.sidebar-link img {
+  height: 24px;
+}
+
+@media(max-width: 900px) {
+  .sidebar {
+  position: fixed;
+  top: 55px;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  padding-top: 5px;
+  background-color: white;
+  z-index: 1;
+  }
+}
+
+@media(max-width: 900px) {
+  .sidebar-link {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    column-gap: 15px;
+  }
+
+  .sidebar-link img {
+    margin-left: 20px;
+  }
+}

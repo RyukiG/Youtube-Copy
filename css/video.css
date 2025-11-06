@@ -1,0 +1,192 @@
+/* ========================
+  MINIATURA DO VÍDEO
+======================== */
+.thumbnail {
+  width: 100%;
+  cursor: pointer;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-time {
+  position: absolute;
+  bottom: 11px;
+  right: 4px;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+/* ========================
+  INFORMAÇÕES DO VÍDEO
+======================== */
+.video-info {
+  margin-left: -2px;
+}
+
+.video-title {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+/* ========================
+  IMAGEM DO CANAL E TOOLTIP
+======================== */
+.profile-picture {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  object-fit: cover;
+}
+
+.profile-picture-container {
+  border-radius: 20px;
+  position: relative; /* necessário para tooltip */
+}
+
+.profile-picture-container:hover .channel-tooltip {
+  opacity: 1;
+}
+
+.channel-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  width: 200px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.profile-picture-tooltip {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.channel-stats {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  height: 50px;
+}
+
+.youtuber-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.youtuber-subs {
+  font-size: 14px;
+}
+
+.picture-tooltip-container {
+  margin-left: 10px;
+}
+
+/* ========================
+  GRADE / GRID DE VÍDEOS
+======================== */
+.video-info-grid {
+  display: flex;
+  gap: 15px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 25px;
+}
+
+/* ========================
+  RESPONSIVIDADE
+======================== */
+
+/* telas pequenas */
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr; /* 2 colunas */
+  }
+}
+
+@media (max-width: 563px) {
+  .video-grid {
+    grid-template-columns: 1fr; /* 1 coluna */
+  }
+
+}
+
+/* telas grandes */
+@media (min-width: 1268px) {
+  .video-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  }
+
+  .video-title {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+    .video-author {
+    font-size: 17px;
+  }
+
+  .video-stats {
+    font-size: 17px;
+  }
+
+}
+
+@media (min-width: 1700px) {
+  .video-grid {
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+  }
+
+  .video-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .video-author {
+    font-size: 18px;
+  }
+
+  .video-stats {
+    font-size: 18px;
+  }
+}
